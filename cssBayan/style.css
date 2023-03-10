@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+main {
+    width: 25%;
+}
+.accordeon {
+    background-color: rgb(235, 159, 46);
+    width: 100%;
+    border-radius: 5%;
+}
+
+.mem-image1 {
+    background-image: url('./assets/1.jpg');
+    height: 20vw;
+    max-width: 100%;
+    background-size: cover;
+}
