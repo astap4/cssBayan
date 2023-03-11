@@ -4,29 +4,46 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-image: url('./assets/Без\ имени-1.png');
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
 .container {
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-
 }
 
 main {
     width: 27%;
 }
-
+h1 {
+    width: 100%;
+    padding: 0 3%;
+    background-color: #FFEBCD;
+    border: 0.1em solid;
+    border-color: #946C45;
+}
 .accordeon {
     width: 100%;
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+    background-color: #FFEBCD;
 }
 
 .accordeon-title {
     position: relative;
-    background-color: rgb(235, 159, 46);
+    background-color: rgba(245, 159, 49, 1);
+    background-image: linear-gradient(181deg, rgba(245, 159, 49, 1) 0%, rgba(255, 188, 103, 1) 100%);
     display: flex;
+    justify-content: space-between;
+    padding: 2%;
 }
 
 .accordeon-input {
@@ -34,40 +51,34 @@ main {
 }
 
 .accordeon-label {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    text-align: center;
     font-weight: 700;
     cursor: pointer;
 }
 
+.label-text {
+    font-size: 1.2rem;
+    margin-left: 5%;
+}
 .label-icon {
-    position: absolute;
-    top: 50%;
-    right: 3%;
-    transform: translateY(-50%);
     width: 5%;
-    height: 80%;
-    background-image: url('./assets/icons8-close.svg');
+    height: 1.5em;
+    background-image: url('./assets/icons8-plus-math-64.png');
     background-repeat: no-repeat;
     background-size: contain;
     transition: transform 0.4s;
+    padding-right: 2%;
 }
 
-.accordeon-title:hover {
-    background-color: rgb(219, 146, 36);
-}
-
-.accordeon-content {
-    background: #ffffff;
+.accordeon-label:hover {
+    background-color: rgb(233, 207, 169);
 }
 
 .mem-image {
     background-repeat: no-repeat; 
-    max-width: 100%;
     background-size: contain;
-    margin: 0 5%;
+    transform: scale(0.6);
+    transition: transform 250ms ease-in-out, width 250ms ease-in-out;
 }
 
 .mem-image1 {
@@ -83,11 +94,15 @@ main {
     background-image: url('./assets/7dcfgs.png');
 }
 
-input:checked + label > .mem-image {
-    height: 23vw;
+input:checked + .accordeon-label > .mem-image {
+    height: 18vw;
+    margin: 2%;
     transform: scale(1);
 }
 
+input:checked + .accordeon-label > .accordeon-title > .label-icon {
+    transform: rotate(45deg);
+}
 .accordeon-input:checked~.accordeon-label::after {
     transform: translateY(-50%) rotate(0.5turn);
 }
