@@ -25,24 +25,24 @@ main {
 
 .accordeon-title {
     position: relative;
+    background-color: rgb(235, 159, 46);
     display: flex;
 }
 
 .accordeon-input {
-    /* display: none; */
+    display: none;
 }
 
 .accordeon-label {
-    display: block;
-    background-color: rgb(235, 159, 46);
+    display: flex;
+    flex-direction: column;
     width: 100%;
     text-align: center;
     font-weight: 700;
     cursor: pointer;
 }
 
-.accordeon-label::after {
-    content: "";
+.label-icon {
     position: absolute;
     top: 50%;
     right: 3%;
@@ -55,26 +55,37 @@ main {
     transition: transform 0.4s;
 }
 
-.accordeon-label:hover {
+.accordeon-title:hover {
     background-color: rgb(219, 146, 36);
 }
 
 .accordeon-content {
     background: #ffffff;
-    height: 23vw;
-    display: none;
+}
+
+.mem-image {
+    background-repeat: no-repeat; 
+    max-width: 100%;
+    background-size: contain;
+    margin: 0 5%;
 }
 
 .mem-image1 {
     background-image: url('./assets/1.jpg');
-    background-repeat: no-repeat;
-    height: 100%;
-    max-width: 100%;
-    background-size: contain;
+}
+.mem-image2 {
+    background-image: url('./assets/student1.png');
+}
+.mem-image3 {
+    background-image: url('./assets/4wmp5smh0ld41.png');
+}
+.mem-image4 {
+    background-image: url('./assets/7dcfgs.png');
 }
 
-.accordeon-input:checked ~ .accordeon-content {
-    display: block;
+input:checked + label > .mem-image {
+    height: 23vw;
+    transform: scale(1);
 }
 
 .accordeon-input:checked~.accordeon-label::after {
