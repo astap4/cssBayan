@@ -15,17 +15,68 @@
 }
 
 main {
-    width: 25%;
+    width: 27%;
 }
+
 .accordeon {
+    width: 100%;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+}
+
+.accordeon-title {
+    position: relative;
+    display: flex;
+}
+
+.accordeon-input {
+    /* display: none; */
+}
+
+.accordeon-label {
+    display: block;
     background-color: rgb(235, 159, 46);
     width: 100%;
-    border-radius: 5%;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.accordeon-label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    width: 5%;
+    height: 80%;
+    background-image: url('./assets/icons8-close.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.4s;
+}
+
+.accordeon-label:hover {
+    background-color: rgb(219, 146, 36);
+}
+
+.accordeon-content {
+    background: #ffffff;
+    height: 23vw;
+    display: none;
 }
 
 .mem-image1 {
     background-image: url('./assets/1.jpg');
-    height: 20vw;
+    background-repeat: no-repeat;
+    height: 100%;
     max-width: 100%;
-    background-size: cover;
+    background-size: contain;
+}
+
+.accordeon-input:checked ~ .accordeon-content {
+    display: block;
+}
+
+.accordeon-input:checked~.accordeon-label::after {
+    transform: translateY(-50%) rotate(0.5turn);
 }
