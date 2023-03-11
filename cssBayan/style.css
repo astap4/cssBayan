@@ -18,19 +18,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
-main {
-    width: 27%;
-}
 h1 {
     width: 100%;
     padding: 0 3%;
     background-color: #FFEBCD;
     border: 0.1em solid;
     border-color: #946C45;
+    font-size: 1.1rem;
 }
+
 .accordeon {
     width: 100%;
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
@@ -38,7 +36,6 @@ h1 {
 }
 
 .accordeon-title {
-    position: relative;
     background-color: rgba(245, 159, 49, 1);
     background-image: linear-gradient(181deg, rgba(245, 159, 49, 1) 0%, rgba(255, 188, 103, 1) 100%);
     display: flex;
@@ -60,6 +57,7 @@ h1 {
     font-size: 1.2rem;
     margin-left: 5%;
 }
+
 .label-icon {
     width: 5%;
     height: 1.5em;
@@ -75,7 +73,7 @@ h1 {
 }
 
 .mem-image {
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-size: contain;
     transform: scale(0.6);
     transition: transform 250ms ease-in-out, width 250ms ease-in-out;
@@ -84,25 +82,101 @@ h1 {
 .mem-image1 {
     background-image: url('./assets/1.jpg');
 }
+
 .mem-image2 {
     background-image: url('./assets/student1.png');
 }
+
 .mem-image3 {
     background-image: url('./assets/4wmp5smh0ld41.png');
 }
+
 .mem-image4 {
     background-image: url('./assets/7dcfgs.png');
 }
 
-input:checked + .accordeon-label > .mem-image {
+.mem-image5 {
+    background-image: url('./assets/tests.jpg');
+}
+
+input:checked+.accordeon-label>.mem-image {
     height: 18vw;
     margin: 2%;
     transform: scale(1);
 }
 
-input:checked + .accordeon-label > .accordeon-title > .label-icon {
+input:checked+.accordeon-label>.accordeon-title>.label-icon {
     transform: rotate(45deg);
 }
+
 .accordeon-input:checked~.accordeon-label::after {
     transform: translateY(-50%) rotate(0.5turn);
+}
+
+@media screen and (min-width: 320px) {
+    main {
+        width: 80%;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .label-text {
+        font-size: 1.1rem;
+        margin-left: 5%;
+    }
+
+    input:checked+.accordeon-label>.mem-image {
+        height: 65vw;
+        margin: 2%;
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 820px) {
+    main {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input:checked+.accordeon-label>.mem-image {
+        height: 40vw;
+        margin: 2%;
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        width: 30%;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    input:checked+.accordeon-label>.mem-image {
+        height: 25vw;
+        margin: 2%;
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    main {
+        width: 30%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input:checked+.accordeon-label>.mem-image {
+        height: 20vw;
+        margin: 2%;
+        transform: scale(1);
+    }
 }
