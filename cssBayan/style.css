@@ -25,7 +25,6 @@ h1 {
     background-color: #FFEBCD;
     border: 0.1em solid;
     border-color: #946C45;
-    font-size: 1.1rem;
 }
 
 .accordeon {
@@ -168,6 +167,16 @@ h1 {
 }
 
 @media screen and (min-width: 1080px) {
+    .accordeon-label:hover>.mem-image-container>.mem-image {
+        height: 20vw;
+        margin: 2%;
+        transform: scale(1);
+    }
+
+    .accordeon-label:hover>.accordeon-title>.label-icon {
+        transform: rotate(45deg);
+    }
+
     main {
         width: 40%;
     }
@@ -184,6 +193,16 @@ h1 {
 }
 
 @media screen and (min-width: 1920px) {
+    .accordeon-label:hover>.mem-image-container>.mem-image {
+        height: 20vw;
+        margin: 2%;
+        transform: scale(1);
+    }
+
+    .accordeon-label:hover>.accordeon-title>.label-icon {
+        transform: rotate(45deg);
+    }
+
     main {
         width: 30%;
     }
