@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('./assets/Без\ имени-1.png');
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    width: 100%;
+    padding: 0 3%;
+    background-color: #FFEBCD;
+    border: 0.1em solid;
+    border-color: #946C45;
+}
+
+.accordeon {
+    width: 100%;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+    background-color: #FFEBCD;
+}
+
+.accordeon-title {
+    background-color: rgba(245, 159, 49, 1);
+    background-image: linear-gradient(181deg, rgba(245, 159, 49, 1) 0%, rgba(255, 188, 103, 1) 100%);
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    color: #0c0c0c;
+}
+
+.accordeon-input {
+    display: none;
+}
+
+.accordeon-label {
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.label-text {
+    font-size: 1.2rem;
+    margin-left: 5%;
+}
+
+.label-icon {
+    width: 5%;
+    height: 1.5em;
+    background-image: url('./assets/icons8-plus-math-64.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.4s;
+    padding-right: 2%;
+    opacity: 0;
+}
+
+.accordeon-title:hover {
+    background-image: linear-gradient(181deg, rgba(245, 159, 49, 1) 0%, rgb(253, 213, 160) 100%);
+}
+
+.mem-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.mem-image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80%;
+    transform: scale(0.6);
+    transition: transform 250ms ease-in-out, width 250ms ease-in-out;
+}
+
+.mem-image1 {
+    background-image: url('./assets/1.jpg');
+}
+
+.mem-image2 {
+    background-image: url('./assets/student1.png');
+}
+
+.mem-image3 {
+    background-image: url('./assets/4wmp5smh0ld41.png');
+}
+
+.mem-image4 {
+    background-image: url('./assets/7dcfgs.png');
+}
+
+.mem-image5 {
+    background-image: url('./assets/tests.jpg');
+}
+
+.accordeon-input:not(:checked)+.accordeon-label .accordeon-title {
+    color: #755a50;
+}
+
+.accordeon-label:hover>.mem-image-container>.mem-image {
+    height: 20vw;
+    margin: 2%;
+    transform: scale(1);
+}
+
+.accordeon-label:hover>.accordeon-title>.label-icon {
+    transform: rotate(45deg);
+}
+
+.accordeon-input:checked+.accordeon-label>.mem-image-container>.mem-image {
+    height: 20vw;
+    margin: 2%;
+    transform: scale(1);
+}
+
+.accordeon-input:checked+.accordeon-label>.accordeon-title>.label-icon {
+    transform: rotate(45deg);
+}
+
+@media screen and (min-width: 320px) {
+    main {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .label-text {
+        font-size: 1.1rem;
+        margin-left: 5%;
+    }
+
+    .accordeon-input:checked+.accordeon-label>.mem-image-container>.mem-image {
+        height: 50vw;
+        margin: 2%;
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 820px) {
+    main {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .accordeon-input:checked+.accordeon-label>.mem-image-container>.mem-image {
+        height: 40vw;
+        margin: 2%;
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .accordeon-label:hover>.mem-image-container>.mem-image {
+        height: 20vw;
+        margin: 2%;
+        transform: scale(1);
+    }
+
+    .accordeon-label:hover>.accordeon-title>.label-icon {
+        transform: rotate(45deg);
+    }
+
+    main {
+        width: 40%;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .accordeon-input:checked+.accordeon-label>.mem-image-container>.mem-image {
+        height: 25vw;
+        margin: 2%;
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .accordeon-label:hover>.mem-image-container>.mem-image {
+        height: 20vw;
+        margin: 2%;
+        transform: scale(1);
+    }
+
+    .accordeon-label:hover>.accordeon-title>.label-icon {
+        transform: rotate(45deg);
+    }
+
+    main {
+        width: 30%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .accordeon-input:checked+.accordeon-label>.mem-image-container>.mem-image {
+        height: 20vw;
+        margin: 2%;
+        transform: scale(1);
+    }
+}
+
+@media (hover: hover) {
+    .accordeon:hover .label-icon {
+        opacity: 1;
+    }
+
+    .accordeon:hover .accordeon-input:not(:checked)+.accordeon-label .accordeon-title {
+        color: #8a2a07;
+    }
+}
